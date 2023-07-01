@@ -1,0 +1,174 @@
+PerspectiveCamera {
+    center 60 44.5 300
+    direction -0.05 -0.0256 -1
+    up 0 1 0
+    angle 30
+    width 700
+    height 480
+}
+
+Lights {
+    numLights 1
+    DirectionalLight {
+        direction -0.5 -0.3 -1
+        color 0.9 0.9 0.9 
+    }
+}
+
+Background {
+    color 0 0 0 
+}
+
+Materials {
+    numMaterials 13
+    Material { 
+        color 0.95 0.15 0.15
+        type 1 0 0
+    }
+    Material { 
+        color 0.75 0.75 0.75 
+        type 1 0 0
+    }
+    Material { 
+        color 0.75 0.75 0.75 
+        type 1 0 0
+        texture texture/gate.jpg
+    }
+    Material { 
+        color 1 1 1
+        type 1 0 0
+    }
+    Material {
+        color 1 1 1
+        type 0 1 0
+    }
+    Material {
+        color 1 1 1
+        type 0 0 1
+        refr 1.5
+    }
+    Material {
+        color 0 0 0
+        emission 30 30 30
+        type 1 0 0
+    }
+    Material {
+        color 0.1 0.1 0.2
+        type 1 0 0
+    }
+    Material {
+        color 0.75 0.75 0.9
+        type 1 0 0
+    }
+    Material {
+        color 0.6 0.2 0.2
+        type 1 2 0
+    }
+    Material {
+        color 0 0 0
+        type 1 2 0
+        texture texture/floor3.png
+    }
+    Material {
+        color 0.8 0.2 0.2
+        type 1 0 0
+    }
+    Material {
+        color 0.3 0.3 0.8
+        type 0 0.5 0.5
+        refr 1.5
+    }
+    
+}
+
+Group {
+    numObjects 13
+    MaterialIndex 0
+    Plane {
+        normal 1 0 0
+        offset 1
+    }
+    MaterialIndex 8
+    Plane {
+        normal -1 0 0
+        offset -99 
+    }
+    MaterialIndex 2
+    Plane {
+        normal 0 0 1
+        offset 0
+    }
+    MaterialIndex 3
+    Plane {
+        normal 0 0 -1
+        offset -300
+    }
+    MaterialIndex 10
+    Plane {
+        normal 0 1 0
+        offset 0
+    }
+    MaterialIndex 1
+    Plane {
+        normal 0 -1 0
+        offset -101.6
+    }
+    MaterialIndex 6
+    Sphere {
+    center 50 701.33 81.6 
+        radius 600
+    }
+    MaterialIndex 11
+    Transform {
+        Translate 20 19 70
+        Scale 0.85 0.95 0.85
+        YRotate 57
+        TriangleMesh {
+            obj_file mesh/teddy.obj
+        }
+    }
+    MaterialIndex 12
+    Transform {
+        Translate 82 -5 130
+        Scale 85 90 85
+        YRotate -45
+        TriangleMesh {
+            obj_file mesh/bunny_200.obj
+        }
+    }
+    MaterialIndex 9
+    Transform {
+        Translate 45 1 100
+        Scale 1.8 1.8 1.8
+        TriangleMesh {
+            obj_file mesh/chess.obj
+        }
+    }
+    Transform {
+        Translate 37 3.1 120
+        Scale 1.5 1.8 1.8
+        ZRotate 95
+        YRotate -30
+        TriangleMesh {
+            obj_file mesh/chess.obj
+        }
+    }
+    MaterialIndex 7
+    Transform {
+        Translate 47 3.1 110
+        Scale 1.5 1.8 1.8
+        ZRotate -95
+        YRotate 60
+        TriangleMesh {
+            obj_file mesh/chess.obj
+        }
+    }
+    Transform {
+        Translate 60 0.8 90
+        Scale 1.8 1.8 1.8
+        TriangleMesh {
+            obj_file mesh/chess.obj
+        }
+    }
+    
+}
